@@ -1,5 +1,5 @@
 let weather = {
-apiKey: "ca533f6fcb708ad09226db03d7e31056",
+,
     fetchWeather: function (city) {
         fetch(
             "http://api.openweathermap.org/data/2.5/weather?q=seattle&appid=ca533f6fcb708ad09226db03d7e31056"
@@ -14,45 +14,57 @@ apiKey: "ca533f6fcb708ad09226db03d7e31056",
         const { name } = data;
         const { icon, description } = data.weather;
         const { temp, humidity } = data.main;
+        const { lat, long } = data.coord;
         const { speed } = data.wind;
-        const { lat, long } = data;
-        }
+
+        document.querySelector(".city").innerText = "Weather in " + name;
+        document.querySelector(".icon").src =
+        "https://openweathermap.org/img/wn/" + icon + ".png";
+        document.querySelector(".description").innerText = description;
+        document.querySelector(".temp").innerText = temp + "°F";
+        document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
+        document.querySelector(".lat").innerText = lat;
+        document.querySelector(".long").innerText = long;
+        document.querySelector(".speed").innerText = "Wind Speed: " + speed + "mph";
+        },
+        search: function () {
+            this.fetchWeather(document.querySelector(".search-bar").value);
+        },
+    };
+
+document.querySelector(".search button")
+.addEventListener("click", function () {
+weather.search();
+});
+
+document.querySelector(".search-bar").addEventListener("keyup", function(event) {
+if (event.key == "Enter") {
+    weather.search();
 }
+});
 
 
 
 
 
+let city="";
+let searchCity + $("#search-city");
+let searchButton = $("#search-button");
+let clearButton = $("#clear-history");
+let currentCity = $("#current-city");
+let currentTemperature = $("#temperature");
+let currentHumidity= $("#humidity");
+let currentWSpeed=$("#wind-speed");
+let sCity=[];
 
-// function GetInfo(){
-//     const newName = document.getElementById("cityInput");
-//     const searchCity = document.getElementById("searchCity");
-//     cityName.innerHTML ="--"+newName.value+"--"
-// }
-
-// fetch("http://api.openweathermap.org/data/2.5/weather?q='+newName.value+'&appid=ca533f6fcb708ad09226db03d7e31056")
-// .then(response => response.json())
-// .then(data => {
-//     for(i=0;i<5;i++) {
-//         document.getElementById("day" +(i+1)+"Main").innerHTML = "Main:" +Number(data.list[i].main.temp -282.92).toFixed(1)+"°";
-//     }
-// })
-
-// const d =new Date();
-// const weekday =["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"]
-
-// function CheckDay(day){
-//     if(day +d.getDay() > 6){
-//         return day +day.getDay()-7;
-//     }
-//     else{
-//         return day +d.getDay();
-//         }
-//     }
-
-//     for(i=0;i<5;i++){
-//         document.getElementById("day" +(i+1)+"Main").innerHTML = weekday[CheckDay(1)];
-//     }
-    
-
+function find(c){
+    for (var i=0; i<sCity.length; i++){
+        if(c.toUpperCase()===sCity[i]){
+            return -1;
+        }
+    }
+    return 1;
+}
+// set up API key for weather 
+let apiKey= "ca533f6fcb708ad09226db03d7e31056";
 
