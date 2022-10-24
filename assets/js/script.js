@@ -48,7 +48,7 @@ if (event.key == "Enter") {
 
 
 let city="";
-let searchCity + $("#search-city");
+let searchCity = $("#search-city");
 let searchButton = $("#search-button");
 let clearButton = $("#clear-history");
 let currentCity = $("#current-city");
@@ -67,4 +67,18 @@ function find(c){
 }
 // set up API key for weather 
 let apiKey= "ca533f6fcb708ad09226db03d7e31056";
-
+function displayWeather(event){
+    event.preventDefault();
+    if(searchCity.val().trim()!==""){
+        city=searchCity.val().trim();
+        currentWeather(city);
+    }
+}
+function currentWeather(city){
+    const queryUR= "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=" + APIKey;
+    $.ajax({
+        url:queryURL,
+        method:"GET",
+    }).then(function(response){
+        
+    }
