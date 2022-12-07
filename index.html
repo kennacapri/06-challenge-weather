@@ -36,16 +36,22 @@
         <aside class="col-3">
           <form>
             <div class="form-group">
-              <h3 for="searchCity">Search for a City:</h3>
+              <h3 for="search-city">Search for a City:</h3>
               <input
                 type="city"
                 class="form-control"
-                id="searchCity"
+                id="search-city"
                 placeholder="Seattle"
               />
             </div>
             <!-- search city info-->
-            <button type="submit" class="btn btn-primary">Search</button>
+            <button
+              type="button"
+              onClick="displayWeather('green')"
+              class="btn btn-primary"
+            >
+              Search
+            </button>
           </form>
           <br />
           <div class="alert alert-primary text-center" role="alert">
@@ -65,55 +71,31 @@
           <h4>5-Day Forecast</h4>
 
           <div class="card-deck">
-            <div class="card text-white bg-dark mb-3" style="max-width: 18rem">
-              <p class="dayOfWeek1 text-center">Monday 10/23/22</p>
-              <img class="card-img-top" src="./assets/img/weather icon.png" />
-              <div class="card-body">
-                <p class="card-temp1">Temperature: 49°F</p>
-                <p class="card-wind1">Wind: 8 MPH</p>
-                <p class="card-humidity1">Humidity: 84%</p>
-              </div>
-            </div>
-
-            <div class="card text-white bg-dark mb-3" style="max-width: 18rem">
-              <p class="dayOfWeek2 text-center">Monday 10/23/22</p>
-              <img class="card-img-top" src="./assets/img/weather icon.png" />
-              <div class="card-body">
-                <p class="card-temp2">Temperature: 49°F</p>
-                <p class="card-wind2">Wind: 8 MPH</p>
-                <p class="card-humidity2">Humidity: 84%</p>
-              </div>
-            </div>
-
-            <div class="card text-white bg-dark mb-3" style="max-width: 18rem">
-              <p class="dayOfWeek3 text-center">Monday 10/23/22</p>
-              <img class="card-img-top" src="./assets/img/weather icon.png" />
-              <div class="card-body">
-                <p class="card-temp3">Temperature: 49°F</p>
-                <p class="card-wind3">Wind: 8 MPH</p>
-                <p class="card-humidity3">Humidity: 84%</p>
-              </div>
-            </div>
-
-            <div class="card text-white bg-dark mb-3" style="max-width: 18rem">
-              <p class="dayOfWeek4 text-center">Monday 10/23/22</p>
-              <img class="card-img-top" src="./assets/img/weather icon.png" />
-              <div class="card-body">
-                <p class="card-temp4">Temperature: 49°F</p>
-                <p class="card-wind4">Wind: 8 MPH</p>
-                <p class="card-humidity4">Humidity: 84%</p>
-              </div>
-            </div>
-
-            <div class="card text-white bg-dark mb-3" style="max-width: 18rem">
-              <p class="dayOfWeek5 text-center">Monday 10/23/22</p>
-              <img class="card-img-top" src="./assets/img/weather icon.png" />
-              <div class="card-body">
-                <p class="card-temp5">Temperature: 49°F</p>
-                <p class="card-wind5">Wind: 8 MPH</p>
-                <p class="card-humidity5">Humidity: 84%</p>
-              </div>
-            </div>
+            <div
+              class="card text-white bg-dark mb-3"
+              style="max-width: 18rem"
+              id="day0"
+            ></div>
+            <div
+              class="card text-white bg-dark mb-3"
+              style="max-width: 18rem"
+              id="day1"
+            ></div>
+            <div
+              class="card text-white bg-dark mb-3"
+              style="max-width: 18rem"
+              id="day2"
+            ></div>
+            <div
+              class="card text-white bg-dark mb-3"
+              style="max-width: 18rem"
+              id="day3"
+            ></div>
+            <div
+              class="card text-white bg-dark mb-3"
+              style="max-width: 18rem"
+              id="day4"
+            ></div>
           </div>
         </div>
       </div>
