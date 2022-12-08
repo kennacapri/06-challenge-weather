@@ -14,3 +14,5 @@ See LICENSE in the repo.
 
 ## Screenshots and url
 https://kennacapri.github.io/06-challenge-weather/
+Screenshot 2022-12-08 at 11.16.56 AM.png
+
