@@ -8,7 +8,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Weather Dashboard</title>
     <link rel="icon" type="image/x-icon" href="./assets/img/weather icon.png" />
   </head>
@@ -29,7 +28,7 @@
   </header>
   <br />
 
-  <body>
+  <body> 
     <main class="container-fluid">
       <!-- Image and text -->
       <div class="row">
@@ -44,14 +43,13 @@
                 placeholder="Seattle"
               />
             </div>
-            <!-- search city info-->
             <button type="submit" class="btn btn-primary" id="search-button">
               Search
             </button>
           </form>
           <br />
           <button
-            class="btn btn-primary text center"
+            class="btn btn-primary text-center"
             type="button"
             id="clear-history"
           >
@@ -64,66 +62,64 @@
           <div class="card mb-3">
             <section class="card-body text-white bg-dark" id="current-weather">
               <h3 class="card-title city-name" id="current-city">City</h3>
-              </p>Temperature: <span class="current" id="temperature"></span></p>
-              </p>Humidity: <span class="current" id="humidity"></span></p>
-              </p>Wind Speed: <span class="current" id="wind-speed"></span></p>
+              <p>Temperature: <span class="current" id="temperature"></span></p>
+              <p>Humidity: <span class="current" id="humidity"></span></p>
+              <p>Wind Speed: <span class="current" id="wind-speed"></span></p>
             </section>
           </div>
 
-
           <h3><span>5-Day Forecast</span></h3>
           <section class="card-deck" id="future-weather">
-
             <br />
-            <div 
-            class="card text-white bg-dark mb-3"
-            style="max-width: 18rem"
-            id="day0"
-              >
-            <p id="fDate0"></p>
-            <p id="fImg0"></p> 
-            <p>Temp: <span id="fTemp0"></span></p>
-            <p>Humidity: <span id="fHumidity0"></span></p>
+            <div
+              class="card text-white bg-dark mb-3"
+              style="max-width: 18rem"
+              id="day0"
+            >
+              <p id="fDate0"></p>
+              <p id="fImg0"></p>
+              <p>Temp: <span id="fTemp0"></span></p>
+              <p>Humidity: <span id="fHumidity0"></span></p>
             </div>
-            <div 
-            class="card text-white bg-dark mb-3"
-            style="max-width: 18rem"
-            id="day1"
-              >
-            <p id="fDate1"></p>
-            <p id="fImg1"></p> 
-            <p>Temp: <span id="fTemp1"></span></p>
-            <p>Humidity: <span id="fHumidity1"></span></p>
+            <div
+              class="card text-white bg-dark mb-3"
+              style="max-width: 18rem"
+              id="day1"
+            >
+              <p id="fDate1"></p>
+              <p id="fImg1"></p>
+              <p>Temp: <span id="fTemp1"></span></p>
+              <p>Humidity: <span id="fHumidity1"></span></p>
             </div>
-            <div 
-            class="card text-white bg-dark mb-3"
-            style="max-width: 18rem"
-            id="day2"
-              >
-            <p id="fDate2"></p>
-            <p id="fImg2"></p> 
-            <p>Temp: <span id="fTemp2"></span></p>
-            <p>Humidity: <span id="fHumidity2"></span></p>
+            <div
+              class="card text-white bg-dark mb-3"
+              style="max-width: 18rem"
+              id="day2"
+            >
+              <p id="fDate2"></p>
+              <p id="fImg2"></p>
+              <p>Temp: <span id="fTemp2"></span></p>
+              <p>Humidity: <span id="fHumidity2"></span></p>
             </div>
-            <div 
-            class="card text-white bg-dark mb-3"
-            style="max-width: 18rem"
-            id="day3"
-              >
-            <p id="fDate3"></p>
-            <p id="fImg3"></p> 
-            <p>Temp: <span id="fTemp3"></span></p>
-            <p>Humidity: <span id="fHumidity3"></span></p>
+            <div
+              class="card text-white bg-dark mb-3"
+              style="max-width: 18rem"
+              id="day3"
+            >
+              <p id="fDate3"></p>
+              <p id="fImg3"></p>
+              <p>Temp: <span id="fTemp3"></span></p>
+              <p>Humidity: <span id="fHumidity3"></span></p>
             </div>
-            <div 
-            class="card text-white bg-dark mb-3"
-            style="max-width: 18rem"
-            id="day4"
-              >
-            <p id="fDate4"></p>
-            <p id="fImg4"></p> 
-            <p>Temp: <span id="fTemp4"></span></p>
-            <p>Humidity: <span id="fHumidity4"></span></p>
+            <div
+              class="card text-white bg-dark mb-3"
+              style="max-width: 18rem"
+              id="day4"
+            >
+              <p id="fDate4"></p>
+              <p id="fImg4"></p>
+              <p>Temp: <span id="fTemp4"></span></p>
+              <p>Humidity: <span id="fHumidity4"></span></p>
             </div>
           </section>
         </div>
