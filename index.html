@@ -35,72 +35,101 @@
       <div class="row">
         <aside class="col-3">
           <form>
-            <div class="form-group">
-              <h3 for="search-city">Search for a City:</h3>
+            <div class="search form-group">
+              <h3 class="searchCity"><span>Search for a City</span></h3>
               <input
-                type="city"
+                type="text"
                 class="form-control"
                 id="search-city"
                 placeholder="Seattle"
               />
             </div>
             <!-- search city info-->
-            <button
-              type="button"
-              onClick="displayWeather('green')"
-              class="btn btn-primary"
-            >
+            <button type="submit" class="btn btn-primary" id="search-button">
               Search
             </button>
           </form>
           <br />
-          <div class="alert alert-primary text-center" role="alert">
-            Seattle
-          </div>
+          <button
+            class="btn btn-primary text center"
+            type="button"
+            id="clear-history"
+          >
+            Clear History
+          </button>
+          <ul class="list-group"></ul>
         </aside>
 
         <div class="col-9">
           <div class="card mb-3">
-            <section class="card-body">
-              <h3 class="card-title">Seattle (today's date)</h3>
-              <p class="card-temp">Temperature: 49°F</p>
-              <p class="card-wind">Wind: 8 MPH</p>
-              <p class="card-humidity">Humidity: 84%</p>
+            <section class="card-body text-white bg-dark" id="current-weather">
+              <h3 class="card-title city-name" id="current-city">City</h3>
+              </p>Temperature: <span class="current" id="temperature"></span></p>
+              </p>Humidity: <span class="current" id="humidity"></span></p>
+              </p>Wind Speed: <span class="current" id="wind-speed"></span></p>
             </section>
           </div>
-          <h4>5-Day Forecast</h4>
 
-          <div class="card-deck">
-            <div
-              class="card text-white bg-dark mb-3"
-              style="max-width: 18rem"
-              id="day0"
-            ></div>
-            <div
-              class="card text-white bg-dark mb-3"
-              style="max-width: 18rem"
-              id="day1"
-            ></div>
-            <div
-              class="card text-white bg-dark mb-3"
-              style="max-width: 18rem"
-              id="day2"
-            ></div>
-            <div
-              class="card text-white bg-dark mb-3"
-              style="max-width: 18rem"
-              id="day3"
-            ></div>
-            <div
-              class="card text-white bg-dark mb-3"
-              style="max-width: 18rem"
-              id="day4"
-            ></div>
-          </div>
+
+          <h3><span>5-Day Forecast</span></h3>
+          <section class="card-deck" id="future-weather">
+
+            <br />
+            <div 
+            class="card text-white bg-dark mb-3"
+            style="max-width: 18rem"
+            id="day0"
+              >
+            <p id="fDate0"></p>
+            <p id="fImg0"></p> 
+            <p>Temp: <span id="fTemp0"></span></p>
+            <p>Humidity: <span id="fHumidity0"></span></p>
+            </div>
+            <div 
+            class="card text-white bg-dark mb-3"
+            style="max-width: 18rem"
+            id="day1"
+              >
+            <p id="fDate1"></p>
+            <p id="fImg1"></p> 
+            <p>Temp: <span id="fTemp1"></span></p>
+            <p>Humidity: <span id="fHumidity1"></span></p>
+            </div>
+            <div 
+            class="card text-white bg-dark mb-3"
+            style="max-width: 18rem"
+            id="day2"
+              >
+            <p id="fDate2"></p>
+            <p id="fImg2"></p> 
+            <p>Temp: <span id="fTemp2"></span></p>
+            <p>Humidity: <span id="fHumidity2"></span></p>
+            </div>
+            <div 
+            class="card text-white bg-dark mb-3"
+            style="max-width: 18rem"
+            id="day3"
+              >
+            <p id="fDate3"></p>
+            <p id="fImg3"></p> 
+            <p>Temp: <span id="fTemp3"></span></p>
+            <p>Humidity: <span id="fHumidity3"></span></p>
+            </div>
+            <div 
+            class="card text-white bg-dark mb-3"
+            style="max-width: 18rem"
+            id="day4"
+              >
+            <p id="fDate4"></p>
+            <p id="fImg4"></p> 
+            <p>Temp: <span id="fTemp4"></span></p>
+            <p>Humidity: <span id="fHumidity4"></span></p>
+            </div>
+          </section>
         </div>
       </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="./assets/js/script.js" defer></script>
+    <script src="./assets/js/weather.js"></script>
   </body>
 </html>

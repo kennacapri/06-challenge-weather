@@ -96,25 +96,30 @@ function currentWeather(city) {
   });
 }
 
-function fetchCoords(cityID) {
+async function fetchCoords(cityID) {
   const queryForecastURL =
     "https://api.openweathermap.org/data/2.5/forecast?id=" +
     cityID +
     "&appid=" +
     APIKey;
-  $.ajax({
+  let coordsData = await $.ajax({
     url: queryForecastURL,
     method: "GET",
   }).then(function (response) { 
-    lat = response.city.coord.lat;
-    lon = response.city.coord.lon;
+    return response;
   });
+    
+    return coordsData;
 }
 // possibly an async/await problem ***
-function currentDayForecast(cityID) {
-  fetchCoords(cityID);
+async function currentDayForecast(cityID) {
+  let coordsData = await fetchCoords(cityID);
+  console.log(coordsData);
+  lat = coordsData.city.coord.lat;
+  lon = coordsData.city.coord.lon;
   console.log(lat);
   console.log(lon);
+
 }
 
 // local storage city search
