@@ -12,3 +12,5 @@ https://openweathermap.org/ for api call of local and future weather data.
 ## License
 See LICENSE in the repo.
 
+## Screenshots and url
+https://kennacapri.github.io/06-challenge-weather/
